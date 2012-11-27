@@ -14,17 +14,16 @@ namespace game
 			sf::Sprite Sprite; 
 			
 	};
-	ball::ball (sf::Image * Image, float x, float y, float Speed)
+	ball::ball (sf::Image * Image, float x, float y, float s)
 	{
 		Sprite.SetImage(*Image);
 		Sprite.SetX(x);
 		Sprite.SetY(y);
-		Speed = Speed;
+		Speed = s;
 	}
 	int ball::update (sf::RenderWindow * App, sf::Clock * Clock)
 	{
 		float ElapsedTime = Clock->GetElapsedTime();
-		float Speed = 50.f;
 		Clock->Reset();
 		float xx = Sprite.GetPosition().x;
 		float yy = Sprite.GetPosition().y;
