@@ -28,9 +28,7 @@ namespace game
 		Clock->Reset();
 		float xx = Sprite.GetPosition().x;
 		float yy = Sprite.GetPosition().y;
-		
-		std::cout << Speed << std::endl;
-		
+				
 		if (App->GetInput().IsKeyDown(sf::Key::Left)) xx -= Speed * ElapsedTime;
 		if (App->GetInput().IsKeyDown(sf::Key::Right)) xx += Speed * ElapsedTime;
 		if (App->GetInput().IsKeyDown(sf::Key::Up)) yy -= Speed * ElapsedTime;
