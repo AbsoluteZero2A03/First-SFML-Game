@@ -12,7 +12,7 @@ int main()
 	if (!Image.LoadFromFile("Images/ball.png")) { return EXIT_FAILURE; }
 	sf::Clock Clock;
 	
-	game::ball ball (&Image, 0.f, 0.f, 50.0);
+	game::ball cball (&Image, 0.f, 0.f, 50.0);
 	
 
 	while (App.IsOpened()) 
@@ -25,8 +25,8 @@ int main()
 		}
 		App.Clear();
 		
-		ball.update(&App, &Clock);
-		ball.draw(&App);
+		cball.update(&App, &Clock);
+		cball.draw(&App);
 
 		App.Display();
 	}
