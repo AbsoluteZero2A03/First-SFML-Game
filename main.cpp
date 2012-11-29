@@ -14,10 +14,10 @@ int main()
 	sf::Clock Clock;
 	
 	game::ball cball (&Image, 3.f, 4.f, 50.0);
-	float border1[] = {0,0, 500,0};
-	float border2[] = {0,0, 0,400};
-	float border3[] = {500,0, 500,400};
-	float border4[] = {0,400, 500,400};
+	float border1[] = {0.f,0.f, 500.f,0.f};
+	float border2[] = {0.f,0.f, 0.f,400.f};
+	float border3[] = {500.f,0.f, 500.f,400.f};
+	float border4[] = {0.f,400.f, 500.f,400.f};
 	float * borders[] = {border1, border2, border3, border4};
 	
 	while (App.IsOpened()) 
@@ -30,7 +30,7 @@ int main()
 		}
 		App.Clear();
 		
-		cball.update(&App, &Clock, &borders);
+		cball.update(&App, &Clock, borders);
 		cball.draw(&App);
 		
 		App.Display();
